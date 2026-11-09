@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="LAB2.Views.MessageBoxWindow"
+        Title="Message"
+        Width="380" Height="190"
+        CanResize="False"
+        Background="White"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid RowDefinitions="*,Auto" Margin="24" Background="White">
+        <ScrollViewer Grid.Row="0">
+            <TextBlock Name="MessageTextBlock"
+                       TextWrapping="Wrap"
+                       FontSize="14"
+                       Foreground="#1F2328"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center" />
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,16,0,0">
+            <Button Name="OkButton"
+                    Content="OK"
+                    Classes="blue"
+                    Width="90"
+                    Height="34"
+                    FontSize="14"
+                    Click="OkButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

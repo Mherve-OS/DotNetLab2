@@ -1,0 +1,15 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:LAB2.ViewModels"
+        x:Class="LAB2.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="LAB2"
+        Width="600" Height="520"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Background="White">
+        <ContentControl Content="{Binding CurrentView}" />
+    </Grid>
+
+</Window>

@@ -1,0 +1,90 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="LAB2.App"
+             xmlns:local="using:LAB2"
+             RequestedThemeVariant="Light">
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+
+        <!-- Blue / Primary Button Style -->
+        <Style Selector="Button.blue">
+            <Setter Property="Background" Value="#0078D7"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        <Style Selector="Button.blue:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#106EBE"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button.blue:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="#005A9E"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- Green / Success Button Style -->
+        <Style Selector="Button.green">
+            <Setter Property="Background" Value="#107C41"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        <Style Selector="Button.green:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#0E6A37"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button.green:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="#0B552C"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- Gray / Secondary Button Style -->
+        <Style Selector="Button.gray">
+            <Setter Property="Background" Value="#6E6E6E"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        <Style Selector="Button.gray:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#5C5C5C"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button.gray:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="#4A4A4A"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- Red / Danger Button Style -->
+        <Style Selector="Button.red">
+            <Setter Property="Background" Value="#C42B1C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        <Style Selector="Button.red:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#A82315"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button.red:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="#8F1D11"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Application.Styles>
+</Application>

@@ -1,0 +1,105 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:LAB2.ViewModels"
+             x:Class="LAB2.Views.MushroomView"
+             x:DataType="vm:MushroomViewModel">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="White">
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="24">
+            <Border Width="420"
+                    Padding="28"
+                    Background="White"
+                    BorderBrush="#D0D7DE"
+                    BorderThickness="1"
+                    CornerRadius="6">
+                <StackPanel Spacing="16">
+                    <!-- Title & Instructions -->
+                    <StackPanel Spacing="4" HorizontalAlignment="Center">
+                        <TextBlock Text="Mushroom Identification"
+                                   FontSize="22"
+                                   FontWeight="Bold"
+                                   Foreground="#1F2328"
+                                   HorizontalAlignment="Center" />
+                        <TextBlock Text="Type yes or no to answer each question."
+                                   FontSize="13"
+                                   Foreground="#656D76"
+                                   HorizontalAlignment="Center" />
+                    </StackPanel>
+
+                    <!-- Question 1 -->
+                    <StackPanel Spacing="6">
+                        <TextBlock Text="Does your mushroom have gills? (yes/no):"
+                                   FontSize="14"
+                                   FontWeight="SemiBold"
+                                   Foreground="#1F2328" />
+                        <TextBox Name="AnswerBox1"
+                                 Text="{Binding Answer1}"
+                                 PlaceholderText="yes or no"
+                                 Height="36"
+                                 KeyDown="AnswerBox1_KeyDown" />
+                    </StackPanel>
+
+                    <!-- Question 2 (Follows if Question 1 is yes) -->
+                    <StackPanel Spacing="6" IsVisible="{Binding IsQ2Visible}">
+                        <TextBlock Text="{Binding Q2Prompt}"
+                                   FontSize="14"
+                                   FontWeight="SemiBold"
+                                   Foreground="#1F2328" />
+                        <TextBox Name="AnswerBox2"
+                                 Text="{Binding Answer2}"
+                                 PlaceholderText="yes or no"
+                                 Height="36"
+                                 KeyDown="AnswerBox2_KeyDown" />
+                    </StackPanel>
+
+                    <!-- Question 3 (Follows if Question 2 is answered) -->
+                    <StackPanel Spacing="6" IsVisible="{Binding IsQ3Visible}">
+                        <TextBlock Text="{Binding Q3Prompt}"
+                                   FontSize="14"
+                                   FontWeight="SemiBold"
+                                   Foreground="#1F2328" />
+                        <TextBox Name="AnswerBox3"
+                                 Text="{Binding Answer3}"
+                                 PlaceholderText="yes or no"
+                                 Height="36"
+                                 KeyDown="AnswerBox3_KeyDown" />
+                    </StackPanel>
+
+                    <!-- Result Box (Shown when identified) -->
+                    <StackPanel Spacing="6" IsVisible="{Binding IsResultVisible}">
+                        <TextBlock Text="Result:"
+                                   FontSize="14"
+                                   FontWeight="SemiBold"
+                                   Foreground="#1F2328" />
+                        <TextBox Text="{Binding ResultText}"
+                                 IsReadOnly="True"
+                                 FontWeight="Bold"
+                                 Height="36" />
+                    </StackPanel>
+
+                    <!-- Only Two Buttons: Back and Logout -->
+                    <Grid ColumnDefinitions="*,*" Margin="0,10,0,0">
+                        <Button Grid.Column="0"
+                                Content="Back"
+                                Classes="gray"
+                                Command="{Binding BackCommand}"
+                                Width="110"
+                                Height="36"
+                                FontSize="14"
+                                HorizontalAlignment="Left" />
+
+                        <Button Grid.Column="1"
+                                Content="Logout"
+                                Classes="red"
+                                Command="{Binding LogoutCommand}"
+                                Width="110"
+                                Height="36"
+                                FontSize="14"
+                                HorizontalAlignment="Right" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+
+</UserControl>

@@ -1,0 +1,47 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:LAB2.ViewModels"
+             x:Class="LAB2.Views.ChooseView"
+             x:DataType="vm:ChooseViewModel">
+
+    <Grid Background="White" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Border Width="380"
+                Padding="28"
+                Background="White"
+                BorderBrush="#D0D7DE"
+                BorderThickness="1"
+                CornerRadius="6">
+            <StackPanel Spacing="18">
+                <!-- Titles -->
+                <StackPanel Spacing="4" HorizontalAlignment="Center">
+                    <TextBlock Text="Choose an Application"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Foreground="#1F2328"
+                               HorizontalAlignment="Center" />
+                    <TextBlock Text="Please select which service you want to open."
+                               FontSize="13"
+                               Foreground="#656D76"
+                               HorizontalAlignment="Center" />
+                </StackPanel>
+
+                <!-- Bicycle Button -->
+                <Button Content="Bicycle Renting"
+                        Classes="blue"
+                        Command="{Binding GoToBicycleCommand}"
+                        HorizontalAlignment="Stretch"
+                        Height="44"
+                        FontSize="15" />
+
+                <!-- Mushroom Button -->
+                <Button Content="Mushroom Identification"
+                        Classes="green"
+                        Command="{Binding GoToMushroomCommand}"
+                        HorizontalAlignment="Stretch"
+                        Height="44"
+                        FontSize="15" />
+            </StackPanel>
+        </Border>
+    </Grid>
+
+</UserControl>
