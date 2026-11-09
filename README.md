@@ -18,7 +18,7 @@ This project is the desktop implementation of **Lab 1** (Bicycle Rental and Mush
 
 ---
 
-## 🏛️ Object-Oriented Programming & Inheritance
+##  Object-Oriented Programming & Inheritance
 
 The project leverages C# Object-Oriented Programming (OOP) and **Inheritance**:
 
@@ -55,7 +55,7 @@ classDiagram
 
 ---
 
-## 🖼️ Application Screenshots
+##  Application Screenshots
 
 ### 1. Login Screen
 * Requires both Username and Password (validated to ensure they are not empty).
@@ -106,7 +106,7 @@ classDiagram
 
 ---
 
-## 🚀 How to Build and Run
+##  How to Build and Run
 
 ### Prerequisites
 * [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
