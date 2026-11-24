@@ -1,9 +1,4 @@
 # LAB 2 - Desktop Application (C# / .NET 8)
-
-> **C# (.NET) Assignment - Transition from Console Application to Desktop Application**
-
----
-
 ## 📌 Project Overview & Note on Avalonia UI
 
 This project is the desktop implementation of **Lab 1** (Bicycle Rental and Mushroom Identification), built using **.NET 8** and **Avalonia UI**.
